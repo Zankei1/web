@@ -6,7 +6,7 @@
     background-color: rgb(245, 245, 245);
 }
 
-.form-container {
+.formContainer {
     width: 50rem;
     height: 50rem;
     padding: 6rem;
@@ -16,33 +16,33 @@
     margin: 0 2rem;
 }
 
-.form-header {
+.formHeader {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
 }
 
-.input-container {
+.inputContainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
 }
 
-.input-container label {
+.inputContainer label {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-.input-container input {
+.inputContainer input {
     height: 4rem;
     border-radius: .4rem;
     padding-inline: 1rem;
     font-size: 2rem;
 }
 
-.sign-in-button {
+.signInButton {
     width: 100%;
     border: none;
     height: 5rem;
