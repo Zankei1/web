@@ -1,0 +1,53 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.form-container {
+    width: 50rem;
+    height: 50rem;
+    padding: 6rem;
+    border-radius: .4rem;
+    background-color: white;
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    margin: 0 2rem;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.input-container label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.input-container input {
+    height: 4rem;
+    border-radius: .4rem;
+    padding-inline: 1rem;
+    font-size: 2rem;
+}
+
+.sign-in-button {
+    width: 100%;
+    border: none;
+    height: 5rem;
+    margin-top: 2rem;
+    border-radius: .4rem;
+    background-color: black;
+    color: white;
+}
