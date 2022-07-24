@@ -4,4 +4,30 @@
 
 .contentContainer {
     width: 100%;
+    padding-inline: 5rem;
+}
+
+.graphsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlightedGraph {
+    width: 100%;
+    background-color: gray;
+    height: 40rem;
+    border-radius: .4rem;
+}
+
+.graphs {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.graph {
+    width: 100%;
+    background-color: gray;
+    height: 40rem;
+    border-radius: .4rem;
 }

@@ -9,6 +9,18 @@ export function Dashboard() {
             <Sidebar />
             <div className={styles.contentContainer}>
                 <Header />
+                <div className={styles.graphsContainer}>
+                    <div className={styles.highlightedGraph}>
+
+                    </div>
+                    <div className={styles.graphs}>
+                        <div className={styles.graph}>
+                        </div>
+                        
+                        <div className={styles.graph}>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
