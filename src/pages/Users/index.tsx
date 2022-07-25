@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 import styles from "./styles.module.css";
@@ -11,7 +12,7 @@ export function Users() {
                 <div className={styles.tableContainer}>
                     <div className={styles.tableTitle}>
                         <h1>Usuários</h1>
-                        <button>Adicionar novo usuário</button>
+                        <Link className={styles.createUserButton} to="/users/create">Adicionar novo usuário</Link>
                     </div>
                     <table className={styles.table}>
                         <thead className={styles.tableHeader}>
