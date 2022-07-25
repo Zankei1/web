@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
+import { AuthContext } from "../../contexts/AuthContext";
 import styles from "./styles.module.css";
 
 export function Users() {
+    const { user } = useContext(AuthContext);
+    
     return (
         <div className={styles.container}>
             <Sidebar />
             <div className={styles.contentContainer}>
-                <Header />
+                <Header userName={user.name} />
                 <div className={styles.tableContainer}>
                     <div className={styles.tableTitle}>
                         <h1>Usuários</h1>

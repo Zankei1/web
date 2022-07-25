@@ -36,7 +36,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
                 email
             })
 
-            history("/dashboard", { state: user });
+            history("/dashboard");
         } catch {
             console.log("Erro");
         }

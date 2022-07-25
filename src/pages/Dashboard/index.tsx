@@ -29,10 +29,7 @@ const options: ApexOptions = {
 }
 
 export function Dashboard() {
-
     const { user } = useContext(AuthContext);
-
-    console.log(user);
 
     return (
         <div className={styles.container}>
