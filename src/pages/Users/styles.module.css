@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+}
+
+.contentContainer {
+    width: 100%;
+    padding-inline: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tableContainer {
+    min-height: 50vh;
+    background-color: gray;
+    border-radius: .4rem;
+    padding: 2rem;
+}
+
+.tableTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 6rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid white;
+}
+
+.tableTitle button {
+    border-radius: .4rem;
+    border: none;
+    padding: 2rem;
+}
+
+.table {
+    width: 100%;
+}
+
+.tableBody tr {
+}
+
+.tableBody td {
+    text-align: center;
+    padding-top: 3rem;
+}

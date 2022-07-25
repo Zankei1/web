@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export function Sidebar() {
@@ -7,22 +8,22 @@ export function Sidebar() {
                 <h1>Users permission</h1>
             </div>
             <div className={styles.linkSession}>
-                <a href="" className={`${styles.link} ${styles.active}`}>
+                <Link to="/dashboard" className={`${styles.link} ${styles.active}`}>
                     <span>Icone</span>
                     Dashboard
-                </a>
-                <a href="" className={styles.link}>
+                </Link>
+                <Link to="/users" className={styles.link}>
                     <span>Icone</span>
                     Usuários
-                </a>
-                <a href="" className={styles.link}>
+                </Link>
+                <Link to="/dashboard" className={styles.link}>
                     <span>Icone</span>
                     Adicionar usuários
-                </a>
-                <a href="" className={styles.link}>
+                </Link>
+                <Link to="/dashboard" className={styles.link}>
                     <span>Icone</span>
                     Permissões
-                </a>
+                </Link>
             </div>
             <button className={styles.signOutButton}>
                     Logout
