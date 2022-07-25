@@ -12,7 +12,6 @@ export function Login() {
         event.preventDefault();
         await signIn(email, password);
     }
-
     
     return (
         <div className={styles.container}>

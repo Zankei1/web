@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 interface HeaderProps {
-    userName: string;
+    userName?: string;
 }
 
 

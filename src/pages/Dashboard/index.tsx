@@ -4,8 +4,9 @@ import { ApexOptions } from "apexcharts";
 import Chart from "react-apexcharts";
 
 import styles from "./styles.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const options: ApexOptions = {
     chart: {
@@ -29,13 +30,21 @@ const options: ApexOptions = {
 }
 
 export function Dashboard() {
+    const history = useNavigate();
     const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        const token = localStorage.getItem('usersPermission.token');
+        if (!token) {
+            history("/");
+        }
+    }, [])
 
     return (
         <div className={styles.container}>
             <Sidebar />
             <div className={styles.contentContainer}>
-                <Header userName={user.name} />
+                <Header userName={user?.name} />
                 <div className={styles.graphsContainer}>
                     <div className={styles.highlightedGraph}>
                         <div className={styles.graphHeader}>

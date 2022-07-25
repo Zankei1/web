@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useCallback, useEffect, useState } from "react";
 import { api } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,7 @@ type User = {
 interface AuthContextProps {
     user: User;
     signIn: (name: string, password: string) => Promise<void>;
+    signOut: () => void;
 }
 
 interface AuthContextProviderProps {
@@ -22,29 +23,62 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     const [user, setUser] = useState<User>();
     const history = useNavigate();
 
-    async function signIn(email: string, password: string) {
+    useEffect(() => {
+        const token = localStorage.getItem('usersPermission.token');
+
+        if (token) {
+            api.get("users/info", {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    const { name, email, created_at: createdAt, supervisor } = response.data;
+                    setUser({
+                        name,
+                        email
+                    })
+                })
+                .catch(() => {
+                    console.log("Erro");
+                })
+        }
+    }, []);
+
+    const signOut = useCallback(() => {
+        localStorage.removeItem('usersPermission.token');
+        localStorage.removeItem('usersPermission.refreshToken');
+        history("/");
+    }, []);
+
+    const signIn = useCallback(async (email: string, password: string) => {
         try {
-            const response = await api.post("sessions", {
+            const response = await api.post('sessions', {
                 email,
                 password
-            });            
+            });
 
-            const { user } = response.data;
+            const { user, token, refresh_token: RefreshToken } = response.data;
+
+
+            localStorage.setItem('usersPermission.token', token);
+            localStorage.setItem('usersPermission.refreshToken', RefreshToken);
 
             setUser({
                 name: user.name,
-                email
-            })
+                email,
+            });
 
-            history("/dashboard");
+            history('/dashboard');
+
         } catch {
-            console.log("Erro");
+            console.log('Erro no login!');
         }
-    }
-    
+    }, []);
+
     return (
-        <AuthContext.Provider value={{ user, signIn }}>
-            { children }
+        <AuthContext.Provider value={{ user, signIn, signOut }}>
+            {children}
         </AuthContext.Provider>
     )
 }
