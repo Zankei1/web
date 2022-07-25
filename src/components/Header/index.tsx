@@ -1,16 +1,21 @@
 import styles from "./styles.module.css";
 
-export function Header() {
+interface HeaderProps {
+    userName: string;
+}
+
+
+export function Header({ userName }: HeaderProps) {    
     return (
         <header className={styles.container}>
             <div className={styles.greetings}>
-                <h1>Seja bem vindo, Pedro Henrique</h1>
+                <h1>Seja bem vindo, { userName }</h1>
             </div>
             <div className={styles.notificationBar}>
                 <div>caixa de notificação</div>
                 <div className={styles.userProfile}>
-                    <img src="https://github.com/pedromm65.png" alt="" />
-                    <span>Pedro Henrique</span>
+                    <img src="https://github.com/zankei1.png" alt="" />
+                    <span>{ userName }</span>
                 </div>
             </div>
         </header>

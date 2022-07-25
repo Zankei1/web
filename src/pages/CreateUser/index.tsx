@@ -31,6 +31,7 @@ export function CreateUser() {
                                 <input type="password" />
                             </div>
                         </div>
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
             </div>
