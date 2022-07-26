@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 2px solid var(--gray-50);
+    margin-top: 2rem;
+    padding-inline: 2rem;
+    border-radius: .4rem;
 }
 
 .greetings {
@@ -14,6 +18,7 @@
 .notificationBar {
     display: flex;
     align-items: center;
+    gap: 2rem;
 }
 
 .userProfile {

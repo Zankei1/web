@@ -17,11 +17,9 @@ type User = {
 export function Users() {
     const { user } = useContext(AuthContext);
 
-    const { data } = useQuery(['users'], async () => {
+    const { data, isLoading, error } = useQuery(['users'], async () => {
         const { data } = await api.get<User[]>("users");
-        
-        console.log(data);
-        
+
         const users = data.map((user) => {
             return {
                 id: user.id_user,
@@ -59,16 +57,16 @@ export function Users() {
                                 <th>Permissões</th>
                             </tr>
                         </thead>
-                        <tbody className={styles.tableBody}>
-                            {data?.map(user => (
-                                <tr key={user.id}>
-                                    <td>{user.name}</td>
-                                    <td>{user.email}</td>
-                                    <td>Funcionario</td>
-                                    <td>Elétrica</td>
-                                </tr>
-                            ))}
-                        </tbody>
+                            <tbody className={styles.tableBody}>
+                                {data?.map(user => (
+                                    <tr key={user.id}>
+                                        <td>{user.name}</td>
+                                        <td>{user.email}</td>
+                                        <td>Funcionario</td>
+                                        <td>Elétrica</td>
+                                    </tr>
+                                ))}
+                            </tbody>
                     </table>
                 </div>
             </div>

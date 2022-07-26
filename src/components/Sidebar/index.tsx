@@ -34,6 +34,7 @@ export function Sidebar() {
                 className={styles.signOutButton}
                 onClick={signOut}
             >
+                <span>Icone</span>
                 Logout
             </button>
         </aside>

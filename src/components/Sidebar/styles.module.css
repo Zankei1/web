@@ -2,18 +2,18 @@
     min-height: 100vh;
     width: 30rem;
     padding: 2rem;
-    background-color: rgb(212, 212, 212);
-
+    /* background-color: rgba(247, 246, 243, 1); */
+    background-color: #E3F2FD;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid var(--gray-50);
 }
 
 .logo {
     width: 100%;
     height: 12rem;
-    border-bottom: 1px solid rgb(182, 182, 182);
+    border-bottom: 2px solid var(--gray-50);
     margin-bottom: 2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,8 +21,6 @@
 
 .linkSession {    
     width: 100%;
-    margin-bottom: 6rem;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -31,11 +29,17 @@
 .signOutButton {
     width: 100%;
     height: 4rem;
-    margin-top: auto;
-    border: none;
     padding-inline: 2rem;
+    color: black;
     border-radius: .4rem;
     transition: background-color .2s;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .signOutButton:hover {

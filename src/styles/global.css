@@ -6,6 +6,8 @@
 
 :root {
     font-size: 62.5%;
+
+    --gray-50: #E5E5E5;
 }
 
 body {
