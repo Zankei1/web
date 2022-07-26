@@ -11,14 +11,14 @@
 }
 
 .link:hover {
-    background-color: #2196F3;
+    background-color: var(--blue-100);
     color: white;
     font-weight: 500;
 
 }
 
 .active {
-    background-color: #2196F3;
+    background-color: var(--blue-100);
     color: white;
     font-weight: 500;
 }

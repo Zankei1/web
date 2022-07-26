@@ -8,6 +8,9 @@
     font-size: 62.5%;
 
     --gray-50: #E5E5E5;
+
+    --blue-50: #E3F2FD;
+    --blue-100: #2196F3;
 }
 
 body {
