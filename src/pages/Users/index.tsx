@@ -46,7 +46,7 @@ export function Users() {
                 <div className={styles.tableContainer}>
                     <div className={styles.tableTitle}>
                         <h1>Usuários</h1>
-                        <button>Adicionar novo usuario</button>
+                        <Link to="/users/create" className={styles.createUserButton}>Adicionar novo usuario</Link>
                     </div>
                     <table className={styles.table}>
                         <thead>

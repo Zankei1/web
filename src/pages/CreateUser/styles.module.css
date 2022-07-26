@@ -13,5 +13,39 @@
 
 .form {
     width: 100%;
-    background-color: red;
+    height: 60rem;
+    border: 2px solid var(--gray-50);
+}
+
+.formHeader {
+    height: 10rem;
+    border-bottom: 2px solid var(--gray-50);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.inputField label {
+    margin-bottom: 1rem;
+}
+
+.inputField input {
+    height: 3rem;
+    width: 60%;
+    border-radius: .4rem;
+    border: 2px solid var(--gray-50);
+}
+
+.submitButtonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4rem;
 }

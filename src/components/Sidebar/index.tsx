@@ -25,7 +25,7 @@ export function Sidebar() {
                     <span>Icone</span>
                     Adicionar usuários
                 </ActiveLink>
-                <ActiveLink to="/teste" className={styles.link}>
+                <ActiveLink to="/dashboard" className={styles.link}>
                     <span>Icone</span>
                     Permissões
                 </ActiveLink>
