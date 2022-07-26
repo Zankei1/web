@@ -11,8 +11,8 @@
     height: 50rem;
     padding: 6rem;
     border-radius: .4rem;
-    background-color: rgba(247, 246, 243, 1);
-    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
     margin: 0 2rem;
 }
 

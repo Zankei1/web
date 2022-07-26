@@ -46,10 +46,10 @@ export function Users() {
                 <div className={styles.tableContainer}>
                     <div className={styles.tableTitle}>
                         <h1>Usuários</h1>
-                        <Link className={styles.createUserButton} to="/users/create">Adicionar novo usuário</Link>
+                        <button>Adicionar novo usuario</button>
                     </div>
                     <table className={styles.table}>
-                        <thead className={styles.tableHeader}>
+                        <thead>
                             <tr>
                                 <th>Nome</th>
                                 <th>Email</th>
@@ -57,19 +57,53 @@ export function Users() {
                                 <th>Permissões</th>
                             </tr>
                         </thead>
-                            <tbody className={styles.tableBody}>
-                                {data?.map(user => (
-                                    <tr key={user.id}>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>Funcionario</td>
-                                        <td>Elétrica</td>
-                                    </tr>
-                                ))}
-                            </tbody>
+                        <tbody className={styles.tableBody}>
+                            {data?.map(user => (
+                                <tr key={user.id}>
+                                    <td>{user.name}</td>
+                                    <td>{user.email}</td>
+                                    <td>Funcionario</td>
+                                    <td>Elétrica</td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
     )
 }
+
+
+{/* <div className={styles.container}>
+<Sidebar />
+<div className={styles.contentContainer}>
+    <Header userName={user?.name} />
+    <div className={styles.tableContainer}>
+        <div className={styles.tableTitle}>
+            <h1>Usuários</h1>
+            <Link className={styles.createUserButton} to="/users/create">Adicionar novo usuário</Link>
+        </div>
+        <table className={styles.table}>
+            <thead className={styles.tableHeader}>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Função</th>
+                    <th>Permissões</th>
+                </tr>
+            </thead>
+                <tbody className={styles.tableBody}>
+                    {data?.map(user => (
+                        <tr key={user.id}>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>Funcionario</td>
+                            <td>Elétrica</td>
+                        </tr>
+                    ))}
+                </tbody>
+        </table>
+    </div>
+</div>
+</div> */}

@@ -5,27 +5,30 @@
 .contentContainer {
     width: 100%;
     padding-inline: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #FBFCFD;
 }
 
 .tableContainer {
+    width: 100%;
+    border: 2px solid var(--gray-50);
     min-height: 60rem;
-    background-color: white;
-    border: 1px solid var(--gray-50);
     border-radius: .4rem;
-    padding: 6rem;
-    margin-top: 2rem;
 }
 
 .tableTitle {
+    width: 100%;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
-    padding-inline: 5rem;
-    border: 1px solid var(--gray-50);
+    padding-inline: 4rem;
+    border-bottom: 2px solid var(--gray-50);
 }
 
-.createUserButton {
+.tableTitle button {
     background-color: var(--blue-100);
     display: flex;
     align-items: center;
@@ -34,6 +37,12 @@
     color: white;
     width: 20rem;
     height: 6rem;
+    border: none;
+    transition: filter .2s;
+}
+
+.tableTitle button:hover {
+    filter: brightness(.9);
 }
 
 .table {

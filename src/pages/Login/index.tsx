@@ -20,16 +20,18 @@ export function Login() {
                     <h1>Login</h1>
                 </header>
                 <div className={styles.inputContainer}>
-                    <label>E-Mail</label>
+                    <label htmlFor="email">E-Mail</label>
                     <input 
+                        id="email"
                         type="email" 
                         value={email}
                         onChange={event => setEmail(event.target.value)}
                     />
                 </div>
                 <div className={styles.inputContainer}>
-                    <label>Password</label>
+                    <label htmlFor="password">Password</label>
                     <input 
+                        id="password"
                         type="password" 
                         value={password}
                         onChange={event => setPassword(event.target.value)}

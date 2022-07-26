@@ -5,39 +5,17 @@ import { AuthContext } from "../../contexts/AuthContext";
 import styles from "./styles.module.css";
 
 export function CreateUser() {
+    
     const { user } = useContext(AuthContext);
-
+    
     return (
         <div className={styles.container}>
             <Sidebar />
             <div className={styles.contentContainer}>
-                <Header userName={user.name} />
-                <div className={styles.formContainer}>
-                    <form className={styles.form}>
-                        <header>Cadastrar novo usuario</header>
-                        <div className={styles.inputContainer}>
-                            <div className={styles.inputField}>
-                                <label>Nome</label>
-                                <input type="text" />
-                            </div>
-                            <div className={styles.inputField}>
-                                <label>Email</label>
-                                <input type="email" />
-                            </div>
-                        </div>
-                        <div className={styles.inputContainer}>
-                            <div className={styles.inputField}>
-                                <label>Senha</label>
-                                <input type="password" />
-                            </div>
-                            <div className={styles.inputField}>
-                                <label>Confirmar senha</label>
-                                <input type="password" />
-                            </div>
-                        </div>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
+                <Header userName={user.name}/>
+                <form className={styles.form}>
+                    
+                </form>
             </div>
         </div>
     )
