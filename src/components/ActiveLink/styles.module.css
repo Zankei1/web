@@ -3,6 +3,8 @@
     height: 4rem;
     padding-inline: 2rem;
     color: black;
+    font-weight: 500;
+    font-size: 1.6rem;
     border-radius: .4rem;
     transition: background-color .2s;
     display: flex;
@@ -13,8 +15,6 @@
 .link:hover {
     background-color: var(--blue-100);
     color: white;
-    font-weight: 500;
-
 }
 
 .active {

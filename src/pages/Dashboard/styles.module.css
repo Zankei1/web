@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    background-color: #E5E5E5;
 }
 
 .contentContainer {
@@ -48,4 +49,19 @@
     background-color: white;
     margin-bottom: 4rem;
 
+}
+
+@media(max-width: 900px) {
+    .graphHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        color: black;
+        font-size: .8rem;
+    }
+
+    .graphs {
+        flex-direction: column;
+    }
 }

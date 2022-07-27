@@ -13,7 +13,7 @@
     --blue-100: #2196F3;
 }
 
-body {
+body, button, textarea {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
 }

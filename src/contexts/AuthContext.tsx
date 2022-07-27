@@ -23,28 +23,6 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     const [user, setUser] = useState<User>();
     const history = useNavigate();
 
-    useEffect(() => {
-        const token = localStorage.getItem('usersPermission.token');
-
-        if (token) {
-            api.get("users/info", {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            })
-                .then(response => {
-                    const { name, email, created_at: createdAt, supervisor } = response.data;
-                    setUser({
-                        name,
-                        email
-                    })
-                })
-                .catch(() => {
-                    console.log("Erro");
-                })
-        }
-    }, []);
-
     const signOut = useCallback(() => {
         localStorage.removeItem('usersPermission.token');
         localStorage.removeItem('usersPermission.refreshToken');
@@ -73,6 +51,24 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
 
         } catch {
             console.log('Erro no login!');
+        }
+    }, []);
+
+    useEffect(() => {
+        const token = localStorage.getItem('usersPermission.token');
+
+        if (token) {
+            api.get("users/info")
+                .then(response => {
+                    const { name, email, created_at: createdAt, supervisor } = response.data;
+                    setUser({
+                        name,
+                        email
+                    })
+                })
+                .catch(() => {
+                    console.log("Erro");
+                })
         }
     }, []);
 

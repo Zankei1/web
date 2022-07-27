@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { ActiveLink } from "../ActiveLink";
+import { RiDashboardFill, RiUserAddFill, RiUserFill, RiLogoutBoxFill } from "react-icons/ri";
+
 import styles from "./styles.module.css";
 
 export function Sidebar() {
@@ -14,28 +16,28 @@ export function Sidebar() {
             </div>
             <div className={styles.linkSession}>
                 <ActiveLink to="/dashboard" className={styles.link}>
-                    <span>Icone</span>
+                    <RiDashboardFill fontSize={20} />
                     Dashboard
                 </ActiveLink>
                 <ActiveLink to="/users" className={styles.link}>
-                    <span>Icone</span>
+                    <RiUserFill fontSize={20} />
                     Usuários
                 </ActiveLink>
                 <ActiveLink to="/users/create" className={styles.link}>
-                    <span>Icone</span>
+                    <RiUserAddFill fontSize={20}/>
                     Adicionar usuários
                 </ActiveLink>
-                <ActiveLink to="/dashboard" className={styles.link}>
+                {/* <ActiveLink to="/#" className={styles.link}>
                     <span>Icone</span>
                     Permissões
-                </ActiveLink>
+                </ActiveLink> */}
             </div>
             <button
                 className={styles.signOutButton}
                 onClick={signOut}
             >
-                <span>Icone</span>
-                Logout
+                <RiLogoutBoxFill fontSize={20} />
+                Sair
             </button>
         </aside>
     )

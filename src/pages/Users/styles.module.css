@@ -16,6 +16,8 @@
     border: 2px solid var(--gray-50);
     min-height: 60rem;
     border-radius: .4rem;
+    margin-bottom: 4rem;
+
 }
 
 .tableTitle {
