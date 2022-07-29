@@ -25,9 +25,8 @@ api.interceptors.response.use(response => {
                     refreshToken
                 })
                 .then(response => {
-                    console.log(response);
                     localStorage.setItem('usersPermission.token', response.data.token);
-                    localStorage.setItem('usersPermission.refreshToken', response.data.refreshToken);
+                    localStorage.setItem('usersPermission.refreshToken', response.data.refresh_token);
                     api.defaults.headers['Authorization'] = `Bearer ${response.data.token}`;
                     failedRequestQueue.forEach(request => request.resolve(response.data.token));
                 })
